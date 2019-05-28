@@ -18,13 +18,6 @@
 
 #include <iostream>
 
-namespace
-{
-
-egui::Context CTX;
-
-}
-
 namespace guilab
 {
 
@@ -32,13 +25,13 @@ void Evaluator::Update(const std::vector<std::shared_ptr<bp::Node>>& nodes)
 {
 }
 
-void Evaluator::Draw(const std::vector<std::shared_ptr<bp::Node>>& nodes)
+void Evaluator::Draw(const std::vector<std::shared_ptr<bp::Node>>& nodes, egui::Context& ctx)
 {
     static bool last_frame_dirty = false;
 
 //    ur::Blackboard::Instance()->GetRenderContext().BindTexture(CURR_TEXID, 0);
 
-    CTX.BeginDraw();
+    ctx.BeginDraw();
 
     uint32_t uid = 1;
     for (auto& node : nodes)
@@ -53,14 +46,14 @@ void Evaluator::Draw(const std::vector<std::shared_ptr<bp::Node>>& nodes)
             int zz = 0;
             if (bp_type == rttr::type::get<node::Button>())
             {
-                if (egui::button(uid++, "btn0", 200, 300, 100, 50, CTX, last_frame_dirty)) {
+                if (egui::button(uid++, "btn0", 200, 300, 100, 50, ctx, last_frame_dirty)) {
                     std::cout << "on click one" << '\n';
                 }
             }
         }
     }
 
-    CTX.EndDraw();
+    ctx.EndDraw();
 
     last_frame_dirty = facade::Facade::Instance()->Flush(false);
     rp::RenderMgr::Instance()->Flush();
@@ -72,7 +65,7 @@ void Evaluator::Draw(const std::vector<std::shared_ptr<bp::Node>>& nodes)
     //const float dt = (curr_time - last_time) / 1000000.0f;
     //last_time = curr_time;
 
-    CTX.Update(0.03f);
+    ctx.Update(0.03f);
 }
 
 }
