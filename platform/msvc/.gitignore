@@ -1,0 +1,5 @@
+guilab/
+projects/*
+
+!projects/guilab.vcxproj
+!projects/guilab.vcxproj.filters

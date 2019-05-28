@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\guilab\Evaluator.h" />
+    <ClInclude Include="..\..\..\include\guilab\GuiLab.h" />
+    <ClInclude Include="..\..\..\include\guilab\Node.h" />
+    <ClInclude Include="..\..\..\include\guilab\node\action.h" />
+    <ClInclude Include="..\..\..\include\guilab\node\condition.h" />
+    <ClInclude Include="..\..\..\include\guilab\node\container.h" />
+    <ClInclude Include="..\..\..\include\guilab\node\event.h" />
+    <ClInclude Include="..\..\..\include\guilab\node\input.h" />
+    <ClInclude Include="..\..\..\include\guilab\node\navigation.h" />
+    <ClInclude Include="..\..\..\include\guilab\node\output.h" />
+    <ClInclude Include="..\..\..\include\guilab\node\primitive.h" />
+    <ClInclude Include="..\..\..\include\guilab\node\selection.h" />
+    <ClInclude Include="..\..\..\include\guilab\node\Widget.h" />
+    <ClInclude Include="..\..\..\include\guilab\PinCallback.h" />
+    <ClInclude Include="..\..\..\include\guilab\PinType.h" />
+    <ClInclude Include="..\..\..\include\guilab\WxNodeProperty.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\Evaluator.cpp" />
+    <ClCompile Include="..\..\..\source\GuiLab.cpp" />
+    <ClCompile Include="..\..\..\source\Node.cpp" />
+    <ClCompile Include="..\..\..\source\PinCallback.cpp" />
+    <ClCompile Include="..\..\..\source\RegistRTTR.cpp" />
+    <ClCompile Include="..\..\..\source\WxNodeProperty.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>7.guilab</ProjectName>
+    <ProjectGuid>{29604CC7-D979-4656-97E6-1BBB81A83ABD}</ProjectGuid>
+    <RootNamespace>guilab</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.26730.12</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\guilab\x86\Debug\</OutDir>
+    <IntDir>..\guilab\x86\Debug\obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\guilab\x86\Release\</OutDir>
+    <IntDir>..\guilab\x86\Release\obj\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\sm\src\sm;..\..\..\..\guard\include;..\..\..\..\cpputil\include;..\..\..\..\primitive\include;..\..\..\..\geoshape\include;..\..\..\..\model\include;..\..\..\..\unirender\include;..\..\..\..\painting0\include;..\..\..\..\painting2\include;..\..\..\..\rendergraph\include;..\..\..\..\renderpipeline\include;..\..\..\..\node0\include;..\..\..\..\node2\include;..\..\..\..\easygui\include;..\..\..\..\moon\include;..\..\..\..\facade\include;..\..\..\..\js\include;..\..\..\..\easyeditor0\include;..\..\..\..\blueprint\include;..\..\..\..\external\boost\include;..\..\..\..\external\rttr\include;..\..\..\..\external\rapidjson\include;..\..\..\..\external-editor\wx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\sm\src\sm;..\..\..\..\guard\include;..\..\..\..\cpputil\include;..\..\..\..\primitive\include;..\..\..\..\geoshape\include;..\..\..\..\model\include;..\..\..\..\unirender\include;..\..\..\..\painting0\include;..\..\..\..\painting2\include;..\..\..\..\rendergraph\include;..\..\..\..\renderpipeline\include;..\..\..\..\node0\include;..\..\..\..\node2\include;..\..\..\..\easygui\include;..\..\..\..\moon\include;..\..\..\..\facade\include;..\..\..\..\js\include;..\..\..\..\easyeditor0\include;..\..\..\..\blueprint\include;..\..\..\..\external\boost\include;..\..\..\..\external\rttr\include;..\..\..\..\external\rapidjson\include;..\..\..\..\external-editor\wx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

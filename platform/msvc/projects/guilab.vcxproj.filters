@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="dataset">
+      <UniqueIdentifier>{695b6d64-4896-4268-949f-02632f4e3886}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dataset\nodes">
+      <UniqueIdentifier>{8d84c3aa-86d0-4071-8acf-b498051f2371}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dataset\pin">
+      <UniqueIdentifier>{95febdf2-a84b-487e-aab4-4d4a24e16ee7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dataset\nodes\widget">
+      <UniqueIdentifier>{f74eeeaf-42d3-466b-a315-c0261ffa8f25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dataset\nodes\trigger">
+      <UniqueIdentifier>{aef1b898-cb3a-4d49-8f0c-6246e9f3ef28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools">
+      <UniqueIdentifier>{670ee8b8-3ada-4144-b06b-ff316c6596a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="view">
+      <UniqueIdentifier>{e1e7a9bc-2812-4888-bc51-c04a8730ed91}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\guilab\Node.h">
+      <Filter>dataset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\guilab\PinType.h">
+      <Filter>dataset\pin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\guilab\PinCallback.h">
+      <Filter>dataset\pin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\guilab\node\action.h">
+      <Filter>dataset\nodes\trigger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\guilab\node\condition.h">
+      <Filter>dataset\nodes\trigger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\guilab\node\event.h">
+      <Filter>dataset\nodes\trigger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\guilab\node\container.h">
+      <Filter>dataset\nodes\widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\guilab\node\input.h">
+      <Filter>dataset\nodes\widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\guilab\node\navigation.h">
+      <Filter>dataset\nodes\widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\guilab\node\output.h">
+      <Filter>dataset\nodes\widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\guilab\node\primitive.h">
+      <Filter>dataset\nodes\widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\guilab\node\selection.h">
+      <Filter>dataset\nodes\widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\guilab\node\Widget.h">
+      <Filter>dataset\nodes\widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\guilab\GuiLab.h" />
+    <ClInclude Include="..\..\..\include\guilab\WxNodeProperty.h">
+      <Filter>view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\guilab\Evaluator.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\Node.cpp">
+      <Filter>dataset</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\PinCallback.cpp">
+      <Filter>dataset\pin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\RegistRTTR.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\GuiLab.cpp" />
+    <ClCompile Include="..\..\..\source\WxNodeProperty.cpp">
+      <Filter>view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\Evaluator.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
