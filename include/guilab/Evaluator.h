@@ -4,7 +4,7 @@
 #include <memory>
 
 namespace bp { class Node; }
-namespace egui { class Context; }
+namespace egui { struct Context; }
 
 namespace guilab
 {
