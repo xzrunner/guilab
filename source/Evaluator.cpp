@@ -25,13 +25,14 @@ void Evaluator::Update(const std::vector<std::shared_ptr<bp::Node>>& nodes)
 {
 }
 
-void Evaluator::Draw(const std::vector<std::shared_ptr<bp::Node>>& nodes, egui::Context& ctx)
+void Evaluator::Draw(const ur2::Device& dev, ur2::Context& ur_ctx,
+                     const std::vector<std::shared_ptr<bp::Node>>& nodes, egui::Context& ctx)
 {
     static bool last_frame_dirty = false;
 
 //    ur::Blackboard::Instance()->GetRenderContext().BindTexture(CURR_TEXID, 0);
 
-    ctx.BeginDraw();
+    ctx.BeginDraw(dev);
 
     uint32_t uid = 1;
     for (auto& node : nodes)
@@ -53,10 +54,10 @@ void Evaluator::Draw(const std::vector<std::shared_ptr<bp::Node>>& nodes, egui::
         }
     }
 
-    ctx.EndDraw();
+    ctx.EndDraw(dev, ur_ctx);
 
     last_frame_dirty = facade::Facade::Instance()->Flush(false);
-    rp::RenderMgr::Instance()->Flush();
+    rp::RenderMgr::Instance()->Flush(dev, ur_ctx);
 
     ///
 
