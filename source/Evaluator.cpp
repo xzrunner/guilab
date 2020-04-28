@@ -56,7 +56,7 @@ void Evaluator::Draw(const ur2::Device& dev, ur2::Context& ur_ctx,
 
     ctx.EndDraw(dev, ur_ctx);
 
-    last_frame_dirty = facade::Facade::Instance()->Flush(ur_ctx, false);
+    last_frame_dirty = facade::Facade::Instance()->Flush(ur_ctx);
     rp::RenderMgr::Instance()->Flush(dev, ur_ctx);
 
     ///
