@@ -25,7 +25,7 @@ void Evaluator::Update(const std::vector<std::shared_ptr<bp::Node>>& nodes)
 {
 }
 
-void Evaluator::Draw(const ur2::Device& dev, ur2::Context& ur_ctx,
+void Evaluator::Draw(const ur::Device& dev, ur::Context& ur_ctx,
                      const std::vector<std::shared_ptr<bp::Node>>& nodes, egui::Context& ctx)
 {
     static bool last_frame_dirty = false;
